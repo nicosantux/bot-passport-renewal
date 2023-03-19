@@ -15,7 +15,7 @@ const CHAT_ID = process.env.CHAT_ID ?? 0
 const bot = new Telegram(process.env.BOT_KEY ?? '')
 const browser = await chromium.launch()
 
-cron.schedule('*/1 * * * *', async () => {
+cron.schedule('*/30 * * * *', async () => {
   const page = await browser.newPage()
 
   await page.goto(PAGE_URL)
